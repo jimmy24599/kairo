@@ -673,16 +673,6 @@ npm start            # Start production server
    npm run dev
    ```
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🆘 Support
-
-- **Documentation**: [docs.kairo.ai](https://docs.kairo.ai)
-- **Community**: [Discord](https://discord.gg/kairo)
-- **Email**: support@kairo.ai
-- **Twitter**: [@kairo_ai](https://twitter.com/kairo_ai)
 
 ## 🎯 Roadmap
 
@@ -701,8 +691,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [ ] Multi-agent collaboration
 - [ ] Enhanced security with sandbox improvements
 
-### Phase 3: Platform Features (Planned)
-- [ ] User authentication
+### Phase 3: Platform Features (In Progress)
+- [x] User authentication
 - [ ] Project sharing
 - [ ] Team collaboration
 - [ ] Version control integration
@@ -725,6 +715,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Built with ❤️ by the Kairo team**
+**Built by Ahmed Gamil**
 
 *Turn any idea into a working web app with AI.*
