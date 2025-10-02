@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "generatedAt": "2025-09-08T11:08:03.329Z",
+    "projectName": "landing-page-project"
+  },
+  "requestSample": "Please create me a modern and luxurious home page of Antalia Properties which offers luxury high end properties. Make sure the page follows the highest UI/UX standards with really beautiful UI that has animations as well.",
+  "structure": {
+    "totalFiles": 27,
+    "directories": [
+      ".kairo-dev-server.json",
+      "app",
+      "components",
+      "next-env.d.ts",
+      "next.config.js",
+      "package-lock.json",
+      "package.json",
+      "path",
+      "postcss.config.js",
+      "public",
+      "tailwind.config.js",
+      "tsconfig.json",
+      "tsconfig.tsbuildinfo"
+    ],
+    "hasAppDir": true,
+    "hasComponentsDir": false,
+    "hasBackendDir": false,
+    "languages": [
+      ".json",
+      ".tsx",
+      ".ts",
+      ".css",
+      ".js",
+      ".txt",
+      ".jpg",
+      ".tsbuildinfo"
+    ]
+  },
+  "llm": {
+    "projectType": "Web Application",
+    "frameworks": [
+      "Next.js",
+      "Tailwind CSS",
+      "React"
+    ],
+    "primaryLanguages": [
+      "TypeScript",
+      "JavaScript",
+      "CSS"
+    ],
+    "mainAreas": [
+      "Home Page",
+      "About",
+      "Contact",
+      "Properties"
+    ],
+    "keyFiles": [
+      "app/page.tsx",
+      "app/layout.tsx",
+      "app/homepage_wireframe.json",
+      "tailwind.config.js"
+    ],
+    "notes": "Next.js app with App Router for luxury properties website, featuring UI/UX with animations."
+  }
+}

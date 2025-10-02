@@ -1,0 +1,179 @@
+/* Antalia Properties – Global Styles (Light theme) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Design tokens via CSS variables
+  - Light, refined palette for a luxurious & modern aesthetic
+  - High contrast for readability
+  - Fluid typography on an 8pt-ish ramp
+*/
+:root {
+  /* Brand palette */
+  --brand: #B88A2E;       /* Rich gold */
+  --brand-600: #A1781F;   /* Deeper gold */
+  --brand-700: #8C6717;   /* Accent for hover */
+  --navy: #0D1B2A;        /* Deep navy for strong contrast */
+  --navy-600: #0B1622;
+
+  /* Neutrals */
+  --bg: #FAFAF8;          /* Soft ivory white */
+  --fg: #0E141B;          /* Charcoal/Navy mix for body text */
+  --muted: #F2F4F6;       /* Subtle section bg */
+  --muted-foreground: #5B6472; /* Secondary text */
+  --card: #FFFFFF;        /* Surfaces */
+  --border: #E6E8EC;      /* Hairline borders */
+
+  /* Effects */
+  --focus: var(--navy);   /* Visible focus ring */
+  --shadow-elevated: 0 10px 30px rgba(13, 27, 42, 0.06);
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  /* Typography */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --leading-default: 1.6;
+
+  /* Fluid type scale */
+  --size-0: clamp(0.875rem, 0.84rem + 0.2vw, 1rem);   /* small */
+  --size-1: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);   /* body */
+  --size-2: clamp(1.125rem, 1.02rem + 0.5vw, 1.25rem);/* lead */
+  --size-3: clamp(1.25rem, 1.05rem + 1vw, 1.5rem);    /* h6 */
+  --size-4: clamp(1.5rem, 1.2rem + 1.6vw, 1.875rem);  /* h5 */
+  --size-5: clamp(1.875rem, 1.4rem + 2.2vw, 2.375rem);/* h4 */
+  --size-6: clamp(2.125rem, 1.6rem + 2.8vw, 2.875rem);/* h3 */
+  --size-7: clamp(2.5rem, 1.8rem + 3.6vw, 3.5rem);    /* h2 */
+  --size-8: clamp(3rem, 2rem + 4.5vw, 4.25rem);       /* h1 */
+
+  /* Subtle brand gradient for accents */
+  --brand-gradient: linear-gradient(135deg, #C6A858 0%, #B88A2E 50%, #8C6717 100%);
+}
+
+html {
+  color-scheme: light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: var(--size-1);
+  line-height: var(--leading-default);
+}
+
+/* Typography */
+:where(h1, h2, h3, h4, h5, h6) {
+  margin: 0 0 0.5em;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--size-8); }
+h2 { font-size: var(--size-7); }
+h3 { font-size: var(--size-6); }
+h4 { font-size: var(--size-5); }
+h5 { font-size: var(--size-4); }
+h6 { font-size: var(--size-3); }
+
+p { margin: 0 0 1rem; }
+small { font-size: var(--size-0); color: var(--muted-foreground); }
+.lead { font-size: var(--size-2); color: var(--muted-foreground); }
+
+/* Links */
+a {
+  color: var(--navy);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in oklab, var(--brand) 60%, transparent);
+  text-underline-offset: 3px;
+  transition: color 200ms ease, text-decoration-color 200ms ease;
+}
+
+a:hover {
+  color: var(--brand-700);
+  text-decoration-color: currentColor;
+}
+
+/* Focus styles: visible, high-contrast, non-intrusive */
+:where(a, button, input, textarea, select, [role="tab"], [role="button"]) {
+  outline: none;
+}
+:where(a, button, input, textarea, select, [role="tab"], [role="button"]):focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Forms base reset */
+button, [type='button'], [type='submit'], [role='button'] {
+  font: inherit;
+  color: inherit;
+}
+
+input, textarea, select {
+  color: var(--fg);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+/* Media elements */
+img, picture, video, canvas, svg { display: block; max-width: 100%; }
+
+/* Selection */
+::selection {
+  background: color-mix(in oklab, var(--brand) 24%, white);
+  color: var(--fg);
+}
+
+/* Layout helpers */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+@media (min-width: 768px) { .container { padding-inline: 2rem; } }
+
+.section-muted { background: var(--muted); }
+.surface { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-md); box-shadow: var(--shadow-elevated); }
+.text-muted { color: var(--muted-foreground); }
+
+/* Motion reduction */
+@media (prefers-reduced-motion: reduce) {
+  *:not([data-allow-motion]) {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utilities for luxury accents without forcing dark UI */
+.brand-gradient-text {
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hr {
+  height: 1px;
+  border: 0;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+}

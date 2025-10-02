@@ -1,0 +1,63 @@
+{
+  "projectOverview": {
+    "name": "Kairo",
+    "type": "web app",
+    "framework": "Next.js",
+    "language": "TypeScript",
+    "architecture": "The project is structured as a full-stack application using Next.js for the frontend and a Node.js backend, with a focus on AI-powered features and a modular component-based architecture."
+  },
+  "directoryStructure": {
+    "mainDirectories": [
+      "AI-Projects",
+      "app",
+      "assets",
+      "backend",
+      "components",
+      "lib",
+      "public"
+    ],
+    "keyFiles": [
+      "package.json",
+      "tsconfig.json",
+      "next.config.js",
+      "tailwind.config.js",
+      "README.md"
+    ],
+    "entryPoints": [
+      "app/page.tsx",
+      "backend/server.js"
+    ]
+  },
+  "dependencies": {
+    "framework": "Next.js 14.0.0",
+    "keyLibraries": [
+      "react",
+      "typescript",
+      "tailwindcss",
+      "axios",
+      "socket.io",
+      "zustand"
+    ],
+    "buildTools": [
+      "next"
+    ],
+    "packageManager": "npm"
+  },
+  "projectContext": {
+    "purpose": "Kairo is an AI-powered web app builder that allows users to create full-stack applications with minimal coding effort.",
+    "currentState": "development",
+    "complexity": "complex",
+    "size": "large"
+  },
+  "userRequestAnalysis": {
+    "requestType": "feature",
+    "affectedAreas": [
+      "app/page.tsx",
+      "components/Header.tsx",
+      "components/AgentMode.tsx",
+      "globals.css"
+    ],
+    "complexity": "medium",
+    "estimatedEffort": "medium"
+  }
+}
