@@ -2,10 +2,6 @@
 
 **Turn any idea into a working web app with AI.** Kairo is an intelligent AI agent platform that understands your project context and generates complete, production-ready applications from natural language descriptions.
 
-## 🚀 Live Demo
-
-[View Live Demo](https://your-demo-link.com) *(Replace with actual deployment URL)*
-
 ## 📋 Table of Contents
 
 - [Overview](#overview)
